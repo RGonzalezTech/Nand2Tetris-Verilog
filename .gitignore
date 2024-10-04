@@ -1,0 +1,4 @@
+# No compiled files
+*.out
+# No testbench output files
+*_output.txt

@@ -21,5 +21,7 @@ module or_gate_tb();
         a = 1; b = 0;
         #1
         a = 1; b = 1;
+
+        $finish;
     end
 endmodule

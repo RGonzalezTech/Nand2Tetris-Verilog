@@ -16,5 +16,7 @@ module not_gate_tb();
         in = 0;
         #1
         in = 1;
+
+        $finish;
     end
 endmodule

@@ -1,0 +1,23 @@
+name: Run Test Benches
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-testbenches:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Install icarus verilog
+      run: sudo apt-get install iverilog
+    - name: Execute Bash script
+      run: |
+        chmod +x ./run_tests.sh
+        ./run_tests.sh

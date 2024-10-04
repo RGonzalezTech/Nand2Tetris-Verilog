@@ -9,6 +9,12 @@ module xor_gate(
     input wire a,
     input wire b
 );
+    // Simple XOR gate
+    // wire aOrB, notAandB;
+    // assign aOrB = a | b;
+    // assign notAAndB = ~(a & b);
+    // assign out = aOrB & notAandB;
+
     wire aOrBOut;
     or_gate aOrB(
         .out(aOrBOut),

@@ -8,6 +8,9 @@ module or_gate(
     input wire a,
     input wire b
 );
+    // Simple OR gate
+    // assign out = a | b;
+
     wire a_not;
     wire b_not;
 

@@ -6,6 +6,9 @@ module not_gate(
     output wire out,
     input wire in
 );
+    // Simple NOT gate
+    // assign out = ~in;
+
     // This is how you get a NOT gate
     // by using a NAND gate
     nand_gate inverter (

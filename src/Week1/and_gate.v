@@ -8,6 +8,9 @@ module and_gate(
     input wire a,
     input wire b
 );
+    // Simple AND gate
+    // assign out = a & b;
+
     wire nand_out;
     nand_gate nand0 (
         .out(nand_out),

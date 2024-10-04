@@ -27,7 +27,6 @@ find "$TEST_BASE_DIR" -type f -name "*_tb.v" | while read -r tb_file; do
     # Compare the output with the expected output
     if diff -q "$output_file" "$expected_output" > /dev/null; then
         echo "Test ${tb_name}_tb: PASS"
-        exit 0
     else
         echo "Test ${tb_name}_tb: FAIL"
         echo "Differences:"

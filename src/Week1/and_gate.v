@@ -15,6 +15,8 @@ module and_gate(
         .b(b)
     );
 
+    // De Morgan's Law:
+    // Invert the output to get an AND gate
     not_gate not0 (
         .out(out),
         .in(nand_out)

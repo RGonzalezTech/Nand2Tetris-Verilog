@@ -1,5 +1,7 @@
 `include "src/Week1/nand_gate.v"
 
+`ifndef NOT_GATE_V
+`define NOT_GATE_V
 module not_gate(
     output wire out,
     input wire in
@@ -12,3 +14,4 @@ module not_gate(
         .b(in)
     );
 endmodule
+`endif

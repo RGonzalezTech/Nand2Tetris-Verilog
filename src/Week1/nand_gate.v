@@ -1,3 +1,5 @@
+`ifndef NAND_GATE_V
+`define NAND_GATE_V
 module nand_gate(
     output wire out,
     input wire a,
@@ -5,3 +7,4 @@ module nand_gate(
 );
     assign out = ~(a & b);
 endmodule
+`endif

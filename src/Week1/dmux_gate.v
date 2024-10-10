@@ -1,15 +1,15 @@
 `include "src/Week1/not_gate.v"
 `include "src/Week1/and_gate.v"
 
-`ifndef DEMUX_GATE_V
-`define DEMUX_GATE_V
-module demux_gate(
+`ifndef DMUX_GATE_V
+`define DMUX_GATE_V
+module dmux_gate(
     output wire a,
     output wire b,
     input wire in,
     input wire sel
 );
-    // Simple DEMUX gate
+    // Simple DMUX gate
     // assign a = in & ~sel;
     // assign b = in & sel;
 

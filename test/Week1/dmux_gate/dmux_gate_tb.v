@@ -1,10 +1,10 @@
-`include "src/Week1/demux_gate.v"
+`include "src/Week1/dmux_gate.v"
 
-module demux_gate_tb();
+module dmux_gate_tb();
     reg in, sel;
     wire a, b;
 
-    demux_gate dmux0(
+    dmux_gate dmux0(
         .a(a),
         .b(b),
         .in(in),

@@ -1,4 +1,4 @@
-`include "src/Week1/demux_gate.v"
+`include "src/Week1/dmux_gate.v"
 
 `ifndef DMUX_4WAY_GATE_V
 `define DMUX_4WAY_GATE_V
@@ -10,29 +10,29 @@ module dmux_4way_gate(
     input wire in,
     input wire [1:0] sel
 );
-    // Simple 4-way DEMUX gate
+    // Simple 4-way DMUX gate
     // assign a = (sel == 2'b00) ? in : 1'b0;
     // assign b = (sel == 2'b01) ? in : 1'b0;
     // assign c = (sel == 2'b10) ? in : 1'b0;
     // assign d = (sel == 2'b11) ? in : 1'b0;
 
-    // Using demux_gates
+    // Using dmux_gates
     wire topHalf, bottomHalf;
-    demux_gate topOrBottom(
+    dmux_gate topOrBottom(
         .a(topHalf),
         .b(bottomHalf),
         .in(in),
         .sel(sel[1]) // 1st bit of sel is the top (aOrB) or bottom (cOrD) selector
     );
 
-    demux_gate aOrB(
+    dmux_gate aOrB(
         .a(a),
         .b(b),
         .in(topHalf),
         .sel(sel[0]) // 0th bit of sel is the a or b selector for the top half
     );
 
-    demux_gate cOrD(
+    dmux_gate cOrD(
         .a(c),
         .b(d),
         .in(bottomHalf),

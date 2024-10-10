@@ -1,4 +1,4 @@
-`include "src/Week1/demux_gate.v"
+`include "src/Week1/dmux_gate.v"
 `include "src/Week1/dmux_4way_gate.v"
 
 `ifndef DMUX_8WAY_GATE_V
@@ -15,7 +15,7 @@ module dmux_8way_gate(
     input wire in,
     input wire [2:0] sel
 );
-    // Simple 8-way DEMUX gate
+    // Simple 8-way DMUX gate
     // assign a = (sel == 3'b000) ? in : 1'b0;
     // assign b = (sel == 3'b001) ? in : 1'b0;
     // assign c = (sel == 3'b010) ? in : 1'b0;
@@ -27,7 +27,7 @@ module dmux_8way_gate(
 
     // Using dmux_4way_gates
     wire topHalf, bottomHalf;
-    demux_gate dmuxTopOrBottom(
+    dmux_gate dmuxTopOrBottom(
         .a(topHalf),
         .b(bottomHalf),
         .in(in),
